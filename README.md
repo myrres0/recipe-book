@@ -31,7 +31,7 @@ List of technologies used in the project:
 - TypeScript
 
 
-## Recent updates ![update](./src/assets/img/update.png)
+## Recent updates
 
 
 - 3.4.24 initial commit
