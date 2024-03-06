@@ -1,0 +1,27 @@
+<app-user-nav></app-user-nav>
+<div class="container">
+    <div class="inside-div">
+        <h2 class="text-center">{{recipe.name}}</h2>
+        <div class="img-div">
+            <img src="{{recipe.image}}" alt="recipe image">
+        </div>
+        <div class="container text-div">
+            <div class="row">
+                <h4 class="text-center">Ingredients</h4>
+                <p style="white-space: pre-line;">{{recipe.ingredients}}</p>
+            </div>                
+            <div class="row">
+                <h4 class="text-center">Description</h4>
+                <p style="white-space: pre-line;">{{recipe.description}}</p>                    
+            </div>
+            <div class="row down-div">
+                <div class="col">
+                    <p>Category: {{recipe.category}}</p>                        
+                </div>
+                <div class="col">
+                    <p>Created at: {{recipe.date}}</p>                         
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

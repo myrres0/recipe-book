@@ -1,0 +1,60 @@
+.container{
+    width: 70%;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    min-height: 100vh;
+    height: 100%;
+    font-size: large;
+}
+.inside-div{
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.291);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.32);
+}
+.form-floating{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+textarea{
+    min-height: 200px;
+}
+
+.row{
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-check{
+    margin-bottom: 40px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    
+
+}
+.form-check-input{
+    height: 35px;
+    width: 35px;
+}
+
+.text-center{
+    font-size:35px;
+    margin-bottom: 30px;
+}
+
+.form-check-label{
+    margin-left: 10px;
+}
+
+.btn{
+    font-size: 25px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: block;
+    margin: 0 auto;
+
+}

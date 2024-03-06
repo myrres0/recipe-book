@@ -1,0 +1,36 @@
+.container { 
+    background: rgba(255, 255, 255, 0.58);
+    border-radius: 20px;
+    margin-top: 50px;
+    width: 60%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.221);
+
+}
+.text-center{
+    padding-top: 20px;
+    font-size: 32px;
+}
+
+.form-outline{
+    margin: 20px;
+}
+.form-label{
+    /* change text size */
+    font-size: 26px;
+}
+.form-control{
+    /* change input size */
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.467);
+}
+
+.btn-lg{
+    /* center button */
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn-sm{
+    margin-bottom: 20px;
+}

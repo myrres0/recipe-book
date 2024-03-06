@@ -1,0 +1,26 @@
+.container {
+    padding-top: 100px;
+    padding-bottom: 150px;
+    min-height: 100vh;
+    height: 100%;
+}
+.inside-div{
+    padding: 20px;
+    padding-left:0px;
+    background: rgba(255, 255, 255, 0.291);
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.32);
+}
+
+.text-center {
+    margin: 20px;
+}
+
+.control-nav{
+    background: rgba(255, 255, 255, 0.658);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust z-index as needed to ensure it appears above content */
+}

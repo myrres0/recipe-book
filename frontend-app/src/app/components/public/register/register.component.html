@@ -1,0 +1,49 @@
+<app-nav></app-nav>
+<section class="vh-100">
+    
+    <div class="container position-absolute top-50 start-50 translate-middle row" style="width: 60%;">  <!-- col-md-6 offset-md-3  -->
+        <div class="col-md">
+             <h2 class="text-center">Sign up</h2>
+        <form (ngSubmit)="onSubmit()">
+
+                <!-- label for first name -->
+            <div class="form-floating">
+                    <input type="text" class="form-control" id="firstname" placeholder="Ibrahim"
+                        [(ngModel)]="user.firstname" name="firstname">
+                    <label class="form-label">First name</label>
+            </div>
+            <!-- label for second name -->
+            <div class="form-floating">
+                <input type="text" class="form-control" id="lastname" placeholder="Muhahammad"
+                    [(ngModel)]="user.lastname" name="lastname">
+                    <label class="form-label">Second name</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="email" placeholder="name@example.com"
+                    [(ngModel)]="user.email" name="email">
+                <label class="form-label">Email</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="password" class="form-control" id="password" placeholder="password"
+                    [(ngModel)]="user.password" name="password">
+                <label class="form-label">Password</label>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-lg btn-outline-dark">Register</button>
+                </div>
+
+                <div class="col link">
+                    <a [routerLink]="[ '/', 'login' ]" class="link-danger link-offset-2 link-underline-opacity-50 link-underline-opacity-100-hover" style='font-size:1.2em'>I already have an account</a>
+                </div>
+            </div>
+    
+        </form>
+        </div>
+        <div class="col">
+            <img src="./assets/img/rabbit.png" alt="rabbit" clas="position-absolute top-50 start-50 translate-middle">
+        </div>
+    </div>
+</section>

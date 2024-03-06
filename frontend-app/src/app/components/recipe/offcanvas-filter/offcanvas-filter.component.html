@@ -1,0 +1,40 @@
+<button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" 
+data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Filters</button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasScrolling" aria-labelledby="name">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="name">Filters for search</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <form (ngSubmit)="onSubmit()" class="form">
+
+      <div class="mb-3">
+        <label for="searchString" class="form-label"><b>Search</b></label>
+        <input type="text" class="form-control" name="searchString" id="searchString" 
+        placeholder="" [(ngModel)]="search"/>
+        <small id="helpId" class="form-text text-muted">write key word to find recipes</small>
+      </div>
+
+      <ul class="list-group">
+        <label for="list-group"><b>Choose categories:</b></label>
+        <li class="list-group-item" *ngFor="let category of categories">
+          <input class="form-check-input me-1" type="checkbox" value=""
+           id="check-{{category}}">
+          <label class="form-check-label stretched-link" for="check-{{category}}">{{category}}</label>
+        </li>
+      </ul>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="mine" [(ngModel)]="mine"/>
+        <label class="form-check-label" for="mine">Show only my recipes</label>
+      </div>
+<!--       
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="image" [(ngModel)]="image"/>
+        <label class="form-check-label" for="image">Show only recipes with images</label>
+      </div> -->
+
+      <button class="btn btn-outline-dark btn-lg" type="submit">Apply filters</button>
+    </form>
+  </div>
+</div>

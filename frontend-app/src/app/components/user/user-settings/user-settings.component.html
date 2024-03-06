@@ -1,0 +1,27 @@
+<app-user-nav></app-user-nav>
+<section class="vh-100">
+    <div class="container">  
+        <h2 class="text-center">Hello, {{user.firstname}}</h2>
+        <form (ngSubmit)="onSubmit()" class="form">
+            <div class="form-outline">
+                <label class="form-label">First name</label>
+                <input type="text" class="form-control" id = "firstname" 
+                placeholder="{{user.firstname}}" [(ngModel)]="user.firstname" name="firstname">
+            </div>
+            <div class="form-outline">
+                <label class="form-label">Last name</label> 
+                <input type="text" class="form-control" id = "lastname" 
+                placeholder="{{user.lastname}}" [(ngModel)]="user.lastname" name="lastname">
+            </div>
+            <div class="form-outline">
+                <fieldset disabled>
+                    <label class="form-label">Email</label>                                
+                    <input type="text" id="disabledTextInput" class="form-control" 
+                    placeholder="{{user.email}}">
+                </fieldset>
+            </div>
+            <button type="submit" class="btn btn-outline-dark btn-lg">Save changes</button>
+        </form>
+        <button class="btn btn-sm btn-danger" type="button" routerLink="change-password">Change password</button>
+    </div>
+</section>

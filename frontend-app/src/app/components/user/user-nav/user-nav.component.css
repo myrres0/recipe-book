@@ -1,0 +1,24 @@
+.navbar {
+background: #ffffff65;
+
+}
+
+.navbar .nav-item .nav-link {
+    color: #6e6e6e;
+}
+
+.navbar .nav-item .nav-link.active {
+    color: rgb(0, 0, 0); /* Change this to your desired color for active nav-item */
+
+}
+
+.nav-link.active .img-active{
+    filter: drop-shadow(0px 1000px 0 rgb(0, 0, 0));
+    transform: translateY(-1000px);
+}
+
+
+img{
+    max-width:100%;
+    max-height:100%;
+}

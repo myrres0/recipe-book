@@ -1,0 +1,22 @@
+.container{
+    width: 50%;
+}
+
+.form-control{
+    background: rgba(255, 253, 253, 0.251);
+}
+
+img{
+    width: 60%;
+    margin-left: 30%;
+}
+
+.btn {
+    margin-top:5%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.form-floating{
+    margin-top: 8%;
+}

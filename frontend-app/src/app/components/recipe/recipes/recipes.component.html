@@ -1,0 +1,24 @@
+<app-user-nav class="control-nav"></app-user-nav>
+
+<div class="container">
+    <div class="inside-div">
+        <div class="row" style="margin-left: 20px;">
+            <!-- <div class="col-2">
+                <h3>Recipes</h3>
+            </div> -->
+            <div class="col-2">
+                <!-- filter button -->
+                <app-offcanvas-filter></app-offcanvas-filter>
+            </div>
+            <div class="col">
+                <!-- search input -->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search" 
+                    aria-label="Search" aria-describedby="button-addon2" [(ngModel)]="search" (keyup.enter)="search_func()">
+                    <button class="btn btn-dark" type="button" id="button-addon2" (click)="search_func()">Search</button>
+            </div>
+
+        </div>
+        <app-recipe-list></app-recipe-list>            
+    </div>
+</div>

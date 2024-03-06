@@ -1,0 +1,8 @@
+
+.main-div {
+    background: rgb(185, 110, 255);
+    background: -webkit-linear-gradient(to bottom right, rgb(250, 205, 255), rgb(255, 98, 116));
+    background: linear-gradient(to bottom right, rgb(185, 110, 255), rgb(147, 172, 255));
+      
+}
+

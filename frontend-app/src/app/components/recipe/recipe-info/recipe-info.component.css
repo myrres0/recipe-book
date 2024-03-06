@@ -1,0 +1,46 @@
+.container{
+    width: 70%;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    min-height: 100vh;
+    height: 100%;
+    font-size: large;
+}
+.inside-div{
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.32);
+
+}
+.text-center{
+    font-size:35px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.form-check-label{
+    margin-left: 10px;
+}
+
+.img-div{
+    max-height:500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+img{
+    max-height: 500px;
+    width: auto;
+}
+
+.text-div{
+    position: relative;
+}
+.down-div{
+    position: absolute; /* Position the child div absolutely */
+    bottom: 0; /* Align the child div to the bottom */
+    width: 100%; /* Make the child div width same as parent */
+}

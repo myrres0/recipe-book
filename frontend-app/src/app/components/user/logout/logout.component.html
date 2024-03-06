@@ -1,0 +1,16 @@
+<app-user-nav></app-user-nav>
+
+<section class="vh-100">
+
+    <div class="container">
+        <h1>Are you sure you want to log out?</h1>
+        <div class="row">
+            <div class="col">
+                <button (click)="logout()" class="btn btn-danger btn-lg btn-yes" routerLink="/home">Yes</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-light btn-lg btn-no" routerLink="/user-home">No</button>
+            </div>
+        </div>
+    </div>
+</section>
