@@ -12,10 +12,10 @@ List of technologies used in the project:
 ### Backend
 
 - Java
-- Spring framework
+- Spring Boot
 - Spring Security
 - Spring Data JPA
-- Spring MVC
+- Spring Web
 - Lombok
 - Maven
 - JWT (JSON Web Token)
