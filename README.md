@@ -2,8 +2,7 @@
 
 _Application is still in development._
 
-Application for managing recipes. The user can add, edit, delete and view recipes.
-The application has a user authentication system. The user can register, log in and log out.
+RecipeBook is a web application that allows users to create, view, and search for recipes. Users can create an account, log in, and create their own recipes. They can also view other users' recipes, search for recipes by name and description, and filter them. Users can also edit their profile information and change their password.
 
 ## Technologies used
 
@@ -29,6 +28,22 @@ List of technologies used in the project:
 - CSS
 - Bootstrap  v.5.3
 - TypeScript
+
+## Short overview of the project
+
+Users can register and log in to the application, with their personal information securely stored in a MySQL database. The system leverages Spring Security with JWT tokens for authentication and ensures password protection through encryption.
+
+![Screenshot 2024-04-02 100913](https://github.com/user-attachments/assets/387e730c-775c-4c6d-8c30-74968fca5548)
+
+![Screenshot 2024-04-02 100725](https://github.com/user-attachments/assets/bdc4c802-9e74-4f00-9f0c-d972c4d36857)
+
+Once logged in, users can explore recipes or search specific ones or create their own.
+![Screenshot 2024-04-02 104554](https://github.com/user-attachments/assets/153f892e-63f9-423b-b99d-f942f3beac7b)
+![Screenshot 2024-04-02 105340](https://github.com/user-attachments/assets/84baae80-170a-4e8a-8a6a-d135b9ac13b3)
+![Screenshot 2024-04-02 105156](https://github.com/user-attachments/assets/28596949-fe82-4394-97f9-e49a2e12624f)
+
+
+
 
 
 ## Recent updates
