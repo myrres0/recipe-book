@@ -1,6 +1,7 @@
-package myrres.foodOrganizer.jpa;
+package myrres.foodOrganizer.jpa.repository;
 
-import myrres.foodOrganizer.restApi.RecipeCategory;
+import myrres.foodOrganizer.jpa.entity.Recipe;
+import myrres.foodOrganizer.rest.api.RecipeCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

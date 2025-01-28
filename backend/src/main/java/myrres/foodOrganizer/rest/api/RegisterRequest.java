@@ -1,4 +1,4 @@
-package myrres.foodOrganizer.restApi;
+package myrres.foodOrganizer.rest.api;
 
 
 import jakarta.persistence.EnumType;

@@ -1,4 +1,4 @@
-package myrres.foodOrganizer.jpa;
+package myrres.foodOrganizer.jpa.entity;
 
 
 import jakarta.persistence.*;
@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import myrres.foodOrganizer.restApi.RecipeCategory;
+import myrres.foodOrganizer.rest.api.RecipeCategory;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package myrres.foodOrganizer.restApi;
+package myrres.foodOrganizer.rest.api;
 
 
 import lombok.AllArgsConstructor;
@@ -10,8 +10,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ChangeUserInfoRequest {
-    String firstname;
-    String lastname;
-    String email;
+public class AuthenticationRequest {
+    private String email;
+    String password;
 }

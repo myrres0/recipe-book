@@ -1,5 +1,6 @@
-package myrres.foodOrganizer.jpa;
+package myrres.foodOrganizer.jpa.repository;
 
+import myrres.foodOrganizer.jpa.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,10 +1,10 @@
 package myrres.foodOrganizer.rest.controller;
 
 import lombok.RequiredArgsConstructor;
-import myrres.foodOrganizer.restApi.AuthenticationRequest;
-import myrres.foodOrganizer.restApi.AuthenticationResponse;
+import myrres.foodOrganizer.rest.api.AuthenticationRequest;
+import myrres.foodOrganizer.rest.api.AuthenticationResponse;
 import myrres.foodOrganizer.service.AuthenticationService;
-import myrres.foodOrganizer.restApi.RegisterRequest;
+import myrres.foodOrganizer.rest.api.RegisterRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

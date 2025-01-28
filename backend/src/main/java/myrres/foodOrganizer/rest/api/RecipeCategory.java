@@ -1,4 +1,4 @@
-package myrres.foodOrganizer.restApi;
+package myrres.foodOrganizer.rest.api;
 
 public enum RecipeCategory {
     MAIN_DISH,
