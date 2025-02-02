@@ -15,5 +15,5 @@ jwt:
 
 cors:
   allowed-origins: http://localhost:4200
-  allowed-methods: GET, PUT, DELETE, OPTIONS
+  allowed-methods: POST, GET, PUT, DELETE, OPTIONS
   allowed-headers: "*"
