@@ -1,22 +1,22 @@
 package myrres.foodOrganizer.service;
 
-import myrres.foodOrganizer.jpa.entity.Recipe;
+import myrres.foodOrganizer.jpa.entity.RecipeEntity;
 
 import java.util.List;
 
 public interface RecipeService {
-    public void addRecipe(Recipe recipe);
+    public void addRecipe(RecipeEntity recipeEntity);
 
-    List<Recipe> filterRecipes(String search, List<Integer> categories, boolean mine, boolean image);
+    List<RecipeEntity> filterRecipes(String search, List<Integer> categories, boolean mine, boolean image);
 
-    List<Recipe> getAllRecipes();
+    List<RecipeEntity> getAllRecipes();
 
-    List<Recipe> getUsersRecipes();
+    List<RecipeEntity> getUsersRecipes();
 
     String deleteRecipe(Long id);
 
-    Recipe getRecipe(Long id);
+    RecipeEntity getRecipe(Long id);
 
-    Recipe changeRecipe(Long id, Recipe recipe);
+    RecipeEntity changeRecipe(Long id, RecipeEntity recipeEntity);
 
 }

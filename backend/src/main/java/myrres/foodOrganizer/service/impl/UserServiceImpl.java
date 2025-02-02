@@ -2,7 +2,7 @@ package myrres.foodOrganizer.service.impl;
 
 
 import lombok.RequiredArgsConstructor;
-import myrres.foodOrganizer.jpa.entity.User;
+import myrres.foodOrganizer.jpa.entity.UserEntity;
 import myrres.foodOrganizer.jpa.repository.UserRepository;
 import myrres.foodOrganizer.rest.api.ChangePasswordRequest;
 import myrres.foodOrganizer.rest.api.ChangeUserInfoRequest;
@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     public void changePassword(ChangePasswordRequest request, Principal connectedUser) {
-        var user = ((User) ((UsernamePasswordAuthenticationToken) connectedUser).getPrincipal()); //get current user
+        var user = ((UserEntity) ((UsernamePasswordAuthenticationToken) connectedUser).getPrincipal()); //get current user
 
         //check if the current password is correct
         if (!passwordEncoder.matches(request.getCurrentPassword(), user.getPassword())) {
@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
 
 
     public void changeUserInfo(ChangeUserInfoRequest request, Principal connectedUser) {
-        var user = ((User) ((UsernamePasswordAuthenticationToken) connectedUser).getPrincipal()); //get current user
+        var user = ((UserEntity) ((UsernamePasswordAuthenticationToken) connectedUser).getPrincipal()); //get current user
         if (request.getFirstname() != null) {
             user.setFirstname(request.getFirstname());
         }
@@ -49,13 +49,13 @@ public class UserServiceImpl implements UserService {
     }
 
     public String deleteUser(Principal connectedUser) {
-        var user = ((User) ((UsernamePasswordAuthenticationToken) connectedUser).getPrincipal()); //get current user
+        var user = ((UserEntity) ((UsernamePasswordAuthenticationToken) connectedUser).getPrincipal()); //get current user
         userRepository.delete(user);
         return "User" + user.getEmail() + "deleted";
     }
 
     public UserInfoResponse getUserInfo(Principal connectedUser) {
-        var user = ((User) ((UsernamePasswordAuthenticationToken) connectedUser).getPrincipal()); //get current user
+        var user = ((UserEntity) ((UsernamePasswordAuthenticationToken) connectedUser).getPrincipal()); //get current user
         return new UserInfoResponse(user.getFirstname(), user.getLastname(), user.getEmail());
     }
 }

@@ -2,18 +2,12 @@ package myrres.foodOrganizer.rest.controller;
 
 
 import lombok.RequiredArgsConstructor;
-import myrres.foodOrganizer.jpa.entity.Recipe;
-import myrres.foodOrganizer.jpa.repository.RecipeRepository;
-import myrres.foodOrganizer.jpa.repository.UserRepository;
+import myrres.foodOrganizer.jpa.entity.RecipeEntity;
 import myrres.foodOrganizer.service.RecipeService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -22,42 +16,42 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RecipeController {
 
-    private RecipeService recipeService;
+    private final RecipeService recipeService;
 
     @PostMapping()
-    public ResponseEntity<?> addRecipe(@RequestBody Recipe recipe) {
-        recipeService.addRecipe(recipe);
+    public ResponseEntity<?> addRecipe(@RequestBody RecipeEntity recipeEntity) {
+        recipeService.addRecipe(recipeEntity);
         return ResponseEntity.ok().build();
 
     }
 
     @GetMapping("filter")
-    public ResponseEntity<List<Recipe>> filterRecipes(@RequestParam(required = false) String search, @RequestParam(required = false) List<Integer> categories,
-                                                      @RequestParam boolean mine, @RequestParam boolean image) {
-        List<Recipe> recipes = recipeService.filterRecipes(search, categories, mine, image);
-        if (CollectionUtils.isEmpty(recipes)) {
+    public ResponseEntity<List<RecipeEntity>> filterRecipes(@RequestParam(required = false) String search, @RequestParam(required = false) List<Integer> categories,
+                                                            @RequestParam boolean mine, @RequestParam boolean image) {
+        List<RecipeEntity> recipeEntities = recipeService.filterRecipes(search, categories, mine, image);
+        if (CollectionUtils.isEmpty(recipeEntities)) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(recipes);
+        return ResponseEntity.ok(recipeEntities);
     }
 
 
     @GetMapping("all")
-    public ResponseEntity<List<Recipe>> getAllRecipes() {
-        List<Recipe> recipes = recipeService.getAllRecipes();
-        if (CollectionUtils.isEmpty(recipes)) {
+    public ResponseEntity<List<RecipeEntity>> getAllRecipes() {
+        List<RecipeEntity> recipeEntities = recipeService.getAllRecipes();
+        if (CollectionUtils.isEmpty(recipeEntities)) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(recipes);
+        return ResponseEntity.ok(recipeEntities);
     }
 
     @GetMapping()
-    public ResponseEntity<List<Recipe>> getUsersRecipes() {
-        List<Recipe> recipes = recipeService.getUsersRecipes();
-        if (CollectionUtils.isEmpty(recipes)) {
+    public ResponseEntity<List<RecipeEntity>> getUsersRecipes() {
+        List<RecipeEntity> recipeEntities = recipeService.getUsersRecipes();
+        if (CollectionUtils.isEmpty(recipeEntities)) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(recipes);
+        return ResponseEntity.ok(recipeEntities);
     }
 
     @DeleteMapping("delete/{id}")
@@ -68,12 +62,12 @@ public class RecipeController {
 
 
     @GetMapping("details/{id}")
-    public ResponseEntity<Recipe> getRecipe(@PathVariable Long id) {
+    public ResponseEntity<RecipeEntity> getRecipe(@PathVariable Long id) {
         return ResponseEntity.ok(recipeService.getRecipe(id));
     }
 
     @PutMapping("details/{id}")
-    public ResponseEntity<Recipe> changeRecipe(@PathVariable Long id, @RequestBody Recipe recipe) {
-        return ResponseEntity.ok(recipeService.changeRecipe(id, recipe));
+    public ResponseEntity<RecipeEntity> changeRecipe(@PathVariable Long id, @RequestBody RecipeEntity recipeEntity) {
+        return ResponseEntity.ok(recipeService.changeRecipe(id, recipeEntity));
     }
 }

@@ -19,7 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "_user")
-public class User implements UserDetails {
+public class UserEntity implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +29,9 @@ public class User implements UserDetails {
     private String firstname;
     @Column(name = "lastname")
     private String lastname;
-    @Column(name = "email")
+
+
+    @Column(name = "email", unique = true, nullable = false)
     private String email;
     @Column(name = "password")
     private String password;
@@ -42,7 +44,6 @@ public class User implements UserDetails {
 //    @OneToMany(mappedBy = "user")
 //    private List<Token> tokens;
 //
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));

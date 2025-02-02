@@ -16,7 +16,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @Table(name = "recipe")
-public class Recipe {
+public class RecipeEntity {
 
     @Id
     @GeneratedValue
